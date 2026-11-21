@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-mini-chart.js"></script>
   <style>
     * { box-sizing: border-box; }
     body {
@@ -19,74 +20,28 @@
       overflow: hidden;
       border: 1px solid #e0e3eb;
     }
+    tv-mini-chart {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
 
   <!-- 1. Dow Jones (DJI) -->
   <div class="chart-card">
-    <div class="tradingview-widget-container" style="height:170px;width:100%">
-      <div class="tradingview-widget-container__widget" style="height:170px;width:100%"></div>
-      <script type="text/javascript" src="https://tradingview.com" async>
-      {
-        "symbol": "FOREXCOM:DJI",
-        "width": "100%",
-        "height": "100%",
-        "locale": "en",
-        "dateRange": "1D",
-        "colorTheme": "light",
-        "isTransparent": true,
-        "autosize": true,
-        "largeChartUrl": "",
-        "chartOnly": false,
-        "noTimeScale": false
-      }
-      </script>
-    </div>
+    <tv-mini-chart symbol="FOREXCOM:DJI" time-frame="1D" theme="light" transparent></tv-mini-chart>
   </div>
 
   <!-- 2. S&P 500 -->
   <div class="chart-card">
-    <div class="tradingview-widget-container" style="height:170px;width:100%">
-      <div class="tradingview-widget-container__widget" style="height:170px;width:100%"></div>
-      <script type="text/javascript" src="https://tradingview.com" async>
-      {
-        "symbol": "FOREXCOM:SPXUSD",
-        "width": "100%",
-        "height": "100%",
-        "locale": "en",
-        "dateRange": "1D",
-        "colorTheme": "light",
-        "isTransparent": true,
-        "autosize": true,
-        "largeChartUrl": "",
-        "chartOnly": false,
-        "noTimeScale": false
-      }
-      </script>
-    </div>
+    <tv-mini-chart symbol="FOREXCOM:SPXUSD" time-frame="1D" theme="light" transparent></tv-mini-chart>
   </div>
 
   <!-- 3. NASDAQ -->
   <div class="chart-card">
-    <div class="tradingview-widget-container" style="height:170px;width:100%">
-      <div class="tradingview-widget-container__widget" style="height:170px;width:100%"></div>
-      <script type="text/javascript" src="https://tradingview.com" async>
-      {
-        "symbol": "FOREXCOM:NSXUSD",
-        "width": "100%",
-        "height": "100%",
-        "locale": "en",
-        "dateRange": "1D",
-        "colorTheme": "light",
-        "isTransparent": true,
-        "autosize": true,
-        "largeChartUrl": "",
-        "chartOnly": false,
-        "noTimeScale": false
-      }
-      </script>
-    </div>
+    <tv-mini-chart symbol="FOREXCOM:NSXUSD" time-frame="1D" theme="light" transparent></tv-mini-chart>
   </div>
 
 </body>
